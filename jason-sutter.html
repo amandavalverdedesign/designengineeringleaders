@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amanda Valverde interviews mid-level interaction designer and front-end developer Jason Sutter about systems, accessibility, prototyping, AI, and leadership from within.">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>Jason Sutter | Design Engineering Leaders</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to interview</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Design Engineering Leaders, Bill Mead interview">
+      <span>DEL</span><span>Design Engineering Leaders</span>
+    </a>
+    <p class="header-credit">INTERVIEWS BY AMANDA VALVERDE</p>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><span aria-hidden="true">+</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Bill Mead</a>
+      <a href="#top" aria-current="page">Jason Sutter</a>
+      <a href="ranier-tinkelenberg.html">Ranier Tinkelenberg</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Dark mode</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-identity">
+        <div class="hero-name hero-name--jason" aria-label="Jason Sutter"><span>JASON</span><span>SUTTER</span></div>
+        <nav class="hero-anchor-links" aria-label="Jason Sutter page sections">
+          <a href="#introduction">Introduction</a>
+          <a href="#interview">Interview</a>
+          <a href="#reflection">Reflection</a>
+        </nav>
+        <a class="scroll-cue" href="#introduction">Read the interview <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-module">
+        <div class="module-top"><span class="crosshair" aria-hidden="true"><i></i></span><span class="issue-number">02</span></div>
+        <div class="module-title"><h1 id="hero-title">On behavior,<br>systems &amp;<br>reducing<br>ambiguity</h1></div>
+        <div class="module-bottom"><span class="interview-label">Interview 02 of 03</span><span class="mini-grid" aria-hidden="true"></span></div>
+      </div>
+    </section>
+
+    <section class="introduction ruled-section" id="introduction" aria-labelledby="intro-title">
+      <div class="section-marker"><span>01</span><p>Introduction</p></div>
+      <div class="intro-copy">
+        <p class="eyebrow">Interaction designer · Front-end developer · Systems thinker</p>
+        <h2 id="intro-title">Jason Sutter works between product design and implementation.</h2>
+        <p class="standfirst">I worked with Jason for nearly two years at Grow Design &amp; Development, a startup based in Auburn, California. His practice includes prototyping complex interactions, developing accessible interfaces, contributing to design systems, and translating product requirements into production-ready experiences. Jason is especially interested in tools that make complicated systems easier to understand, from project-management platforms to privacy-conscious forms and educational software.</p>
+        <p>Working primarily with Figma, HTML, CSS, JavaScript, React, and TypeScript, he treats code as both a production medium and a way to investigate design ideas. His role often requires him to connect perspectives across design, engineering, product, and research while protecting the clarity and quality of the user experience.</p>
+      </div>
+    </section>
+
+    <section class="interview" id="interview" aria-labelledby="interview-title">
+      <header class="interview-header">
+        <div class="section-marker light-marker"><span>02</span><p>Interview</p></div>
+        <div><p class="eyebrow">Ten questions · Full responses</p><h2 id="interview-title">The conversation</h2><p>A mid-level perspective on maintaining continuity between design intent, technical implementation, and the people an interface must serve.</p></div>
+        <button class="expand-all" type="button" data-expand-all aria-pressed="false">Expand all</button>
+      </header>
+
+      <div class="question-list">
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="true" aria-controls="jason-answer-01"><span class="question-number">01</span><span class="question-copy"><small>Between disciplines</small>How do you describe design engineering?</span><span class="toggle-mark" aria-hidden="true">−</span></button>
+          <div class="answer" id="jason-answer-01">
+            <p class="speaker">Jason</p>
+            <p>I describe it as designing with a realistic understanding of how an interface behaves once it becomes software. A product designer might define the intended experience, while a front-end engineer determines how to implement it reliably. A design engineer moves continuously between those concerns.</p>
+            <p>That does not necessarily mean doing two full-time jobs at once. It means being able to think through interaction, visual hierarchy, accessibility, component structure, application state, and technical constraints as interconnected parts of the same problem. I might explore a workflow in Figma, but I will often move into code when the important questions involve responsiveness, animation, conditional behavior, or real data. Some design decisions cannot be evaluated honestly inside a static frame.</p>
+            <p>The role is also highly translational. I help designers understand what the technology makes possible, help engineers understand which experiential details are essential, and help product partners see the consequences of changing scope. The value is not simply that I can design and code. It is that I can preserve intent as an idea moves between disciplines.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-02"><span class="question-number">02</span><span class="question-copy"><small>From system to screen</small>What does a typical project look like from beginning to end?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-02" hidden>
+            <p class="speaker">Jason</p>
+            <p>I usually begin by trying to understand the system before designing the screen. Who is using it? What are they trying to accomplish? What information does the product have at each point? What can go wrong? What needs to persist after the user leaves?</p>
+            <p>I map the primary flow, but I also document alternate paths and states: loading, empty, success, partial success, error, lost connection, insufficient permissions, and destructive-action confirmation. Those states often reveal more about the product than the ideal path does.</p>
+            <p>From there, I might create rough flows in Figma, prototype the uncertain interactions, and test the riskiest assumptions. Once the direction feels credible, I begin thinking in reusable components and design-system patterns. Depending on the team, I may build a coded prototype, contribute directly to the production interface, or create a reference implementation for another engineer.</p>
+            <p>The process is rarely linear. Implementation exposes gaps in the design, user testing challenges the underlying workflow, and technical discoveries create new possibilities. My role is to keep those feedback loops active rather than treating design handoff as the end of design.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-03"><span class="question-number">03</span><span class="question-copy"><small>Choosing fidelity</small>When does an idea need to be prototyped in code rather than Figma?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-03" hidden>
+            <p class="speaker">Jason</p>
+            <p>I use Figma when I need to explore hierarchy, content, navigation, layout, or the broad sequence of an experience. I move into code when the central question is behavioral.</p>
+            <p>If an interface depends on drag-and-drop, live data, keyboard interaction, responsive reflow, complex animation, collaboration, or several interdependent states, a coded prototype usually gives us more reliable evidence. It reveals latency, focus behavior, browser constraints, text wrapping, touch-target problems, and all the small transitions that static frames tend to conceal.</p>
+            <p>I do not believe coded prototypes are inherently better. They are more expensive and can create the false impression that a concept is nearly finished. The prototype should match the question. If we only need to know whether users understand the navigation, building a complete React application would be wasteful. If we need to know whether a complicated interaction feels learnable and responsive, static screens may not tell us enough.</p>
+            <p>Choosing the appropriate fidelity is one of the most important design-engineering skills.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-04"><span class="question-number">04</span><span class="question-copy"><small>Working fluency</small>What skills do you rely on most heavily?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-04" hidden>
+            <p class="speaker">Jason</p>
+            <p>Systems thinking is probably the skill I use most. I need to understand how a decision in one part of the experience affects other screens, components, users, and states. A seemingly minor request, such as adding another account type, can alter navigation, permissions, onboarding, error handling, and data visibility.</p>
+            <p>On the technical side, I rely heavily on semantic HTML, CSS, JavaScript, component architecture, browser-development tools, Git, and a working knowledge of APIs and application state. I do not need to be the strongest engineer on every team, but I need enough fluency to evaluate feasibility, inspect implementation, and collaborate without turning every technical question into a handoff.</p>
+            <p>Communication is equally important. I have to explain why an interaction detail matters without framing everything as personal design preference. Research and accessibility give me stronger grounds for those conversations. Instead of saying, “This version feels better,” I can explain how it improves comprehension, keyboard access, error recovery, or consistency with an established pattern.</p>
+            <p>Curiosity connects all of these skills. The work rewards people who are willing to open the browser inspector, read documentation, test an assumption, and ask how the system actually behaves.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-05"><span class="question-number">05</span><span class="question-copy"><small>Invisible risk</small>What kinds of challenges keep you up at night?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-05" hidden>
+            <p class="speaker">Jason</p>
+            <p>The biggest one is the possibility that we are polishing the wrong experience. A team can spend weeks refining components while avoiding a more fundamental question: Does this workflow make sense to the person using it?</p>
+            <p>I also worry about invisible exclusions. An interface may look finished while remaining difficult to use with a keyboard, screen reader, magnification, reduced motion, slow connection, or limited technical confidence. Accessibility problems frequently emerge from product decisions made long before anyone audits the code. If a process requires a user to remember information across several screens or recover from an unclear failure, changing the color contrast will not solve the underlying issue.</p>
+            <p>Another concern is the accumulation of inconsistency under deadline pressure. One exception becomes five slightly different components, and those differences eventually create maintenance problems for engineers and comprehension problems for users.</p>
+            <p>Finally, I think about whether the team has made its tradeoffs consciously. Compromise is unavoidable. The danger is allowing temporary shortcuts to become permanent without documenting what was lost.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-06"><span class="question-number">06</span><span class="question-copy"><small>Quality under pressure</small>How do you balance craft and speed?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-06" hidden>
+            <p class="speaker">Jason</p>
+            <p>I separate essential quality from optional refinement. Essential quality includes usability, accessibility, understandable feedback, dependable behavior, and a clear path to recovery. Optional refinement might include a more sophisticated transition or a highly customized visual treatment. Both contribute to the experience, but they do not carry the same risk if delayed.</p>
+            <p>I also try to define the smallest coherent version of the idea. There is a difference between reducing scope and fragmenting an experience. A smaller workflow can still feel intentional. A fragmented one leaves users encountering missing explanations, dead ends, or inconsistent behavior.</p>
+            <p>Reusable components help us move quickly without repeatedly sacrificing quality. If accessibility, responsive behavior, interaction states, and visual tokens are built into the shared system, speed becomes less dependent on individual vigilance.</p>
+            <p>When we make a compromise, I document it. That includes what we changed, why we changed it, what risk remains, and what evidence would justify revisiting it. Under pressure, leadership sometimes means protecting a few critical details while being flexible about everything else.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-07"><span class="question-number">07</span><span class="question-copy"><small>Acceleration and accountability</small>How has artificial intelligence affected your work?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-07" hidden>
+            <p class="speaker">Jason</p>
+            <p>AI has accelerated certain parts of the work, particularly exploration, debugging, documentation, test generation, and repetitive implementation. It can help me build several approaches quickly or understand an unfamiliar part of a codebase. That shortens the distance between a question and something I can evaluate.</p>
+            <p>But speed is not the same as judgment. Generated interfaces often produce a convincing ideal state while ignoring accessibility, edge cases, data integrity, privacy, maintainability, and the logic connecting one interaction to another. The result may look complete before it has been meaningfully designed.</p>
+            <p>AI also increases the importance of technical literacy. If I cannot read the output, test it, identify security concerns, or recognize brittle architecture, I cannot responsibly use it. The same is true of design judgment. I still need to determine whether the experience serves the user and whether the system is communicating honestly.</p>
+            <p>The skill is no longer simply producing every line or screen manually. It is directing the work, evaluating it critically, and accepting responsibility for what reaches the user.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-08"><span class="question-number">08</span><span class="question-copy"><small>The next horizon</small>What do you wish you understood better?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-08" hidden>
+            <p class="speaker">Jason</p>
+            <p>I would like a deeper understanding of back-end architecture and infrastructure. I can work with APIs and reason about data, but I want to better understand how decisions about databases, authentication, permissions, performance, security, and deployment constrain the front-end experience.</p>
+            <p>I would also like more exposure to large-scale design-system governance. Building a good component is one challenge. Maintaining a system across products, teams, and changing organizational priorities is another. That work involves documentation, adoption, contribution models, versioning, and a great deal of negotiation.</p>
+            <p>On the design side, I want to become better at measuring whether interaction improvements create lasting value. Usability testing can tell us whether someone completes a task, but leadership requires connecting interface decisions to longer-term outcomes such as trust, confidence, retention, and reduced support burden.</p>
+            <p>Being mid-level means I am competent enough to see how much more there is to understand. That can be uncomfortable, but it is also what keeps the work interesting.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-09"><span class="question-number">09</span><span class="question-copy"><small>Influence without authority</small>What does leadership look like when you are not the manager?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-09" hidden>
+            <p class="speaker">Jason</p>
+            <p>It looks like reducing ambiguity for other people. That might mean making an interactive prototype so the team can evaluate a behavior instead of debating abstractions. It might mean documenting states that nobody has considered, raising an accessibility concern early, or bringing an engineer into the design process before the solution becomes rigid.</p>
+            <p>Leadership also means knowing when to ask for help. Pretending to understand an architectural issue does not protect the project. A good mid-level practitioner can identify the limits of their expertise, involve the right person, and make that collaboration productive.</p>
+            <p>I think consistency is another form of leadership. If I write clear documentation, give thoughtful feedback, acknowledge tradeoffs, and follow through on details, other people can work with greater confidence. That may not look dramatic, but it changes the quality of the team.</p>
+            <p>You do not need authority to improve how a group thinks. You need evidence, generosity, and the willingness to make unclear things visible.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="jason-answer-10"><span class="question-number">10</span><span class="question-copy"><small>Learning through behavior</small>What advice would you give an aspiring design engineer?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="jason-answer-10" hidden>
+            <p class="speaker">Jason</p>
+            <p>Build things that have behavior, not just polished landing pages. Create a form with validation and recovery. Build a responsive navigation system. Work with an API. Design empty, loading, error, and permission states. Make something usable with only a keyboard. Those projects will teach you how design decisions change once they encounter real constraints.</p>
+            <p>Learn the foundations before becoming overly attached to a particular framework. Semantic HTML, CSS layout, JavaScript, accessibility, browser behavior, and Git will remain useful even as tools change.</p>
+            <p>When presenting your work, explain the decisions connecting design and implementation. A repository proves that code exists, but it does not automatically reveal your reasoning. Show what you learned from users, why the interaction works as it does, which constraints shaped it, what tradeoffs you made, and how you evaluated the result.</p>
+            <p>Most importantly, do not wait until you feel equally expert in design and engineering. Very few people are. Start from your stronger discipline, learn enough of the adjacent one to collaborate meaningfully, and keep expanding the territory between them.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pull-quotes ruled-section" aria-labelledby="quotes-title">
+      <div class="section-marker"><span>03</span><p>In his words</p></div>
+      <div class="quotes-content">
+        <p class="eyebrow">Selected pull quotes</p><h2 id="quotes-title">Ideas worth carrying forward</h2>
+        <div class="quotes-grid">
+          <blockquote>“The value is not simply that I can design and code. It is that I can preserve intent as an idea moves between disciplines.”</blockquote>
+          <blockquote>“Some design decisions cannot be evaluated honestly inside a static frame.”</blockquote>
+          <blockquote>“There is a difference between reducing scope and fragmenting an experience.”</blockquote>
+          <blockquote>“AI can accelerate production, but it cannot accept responsibility for what reaches the user.”</blockquote>
+          <blockquote>“Leadership looks like reducing ambiguity for other people.”</blockquote>
+          <blockquote>“Build things that have behavior, not just polished landing pages.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflection" id="reflection" aria-labelledby="reflection-title">
+      <header class="reflection-header"><div class="section-marker light-marker"><span>04</span><p>Reflection</p></div><div><p class="eyebrow">What I learned</p><h2 id="reflection-title">Role, challenge, leadership</h2></div></header>
+      <div class="reflection-grid">
+        <article><span>01 · The role</span><p>Through this interview, I learned that the design engineer’s role is less about occupying a perfect midpoint between two professions and more about maintaining continuity between them. The role connects user needs, interaction decisions, component behavior, technical architecture, and production constraints. Design engineers use code not only to execute finished designs, but also to investigate ideas and expose questions that static artifacts cannot answer. Their value comes from helping teams preserve the intent of an experience as it travels from research and concept development into functioning software.</p></article>
+        <article><span>02 · The challenge</span><p>I also learned that many of the role’s hardest challenges are systemic rather than purely visual or technical. Design engineers must balance quality and speed, account for overlooked states, advocate for accessibility, and prevent temporary compromises from quietly becoming permanent. They work within the tension between a coherent user experience and the practical limitations of schedules, platforms, legacy systems, and organizational priorities. The emergence of AI adds another tension: practitioners can produce and explore more quickly, but they must exercise greater judgment when evaluating the accessibility, security, maintainability, and human consequences of what is generated.</p></article>
+        <article><span>03 · Leadership from within</span><p>Most importantly, I learned that leadership from within does not depend on having a managerial title. A mid-level practitioner can lead by making ambiguity visible, asking difficult questions early, documenting decisions, and creating artifacts that help a team think more concretely. Leadership also includes acknowledging the boundaries of one’s knowledge and bringing the appropriate people into the process. From this perspective, design-engineering leadership is not the performance of having every answer. It is the consistent practice of improving shared understanding, protecting essential qualities of the experience, and enabling others to make better decisions.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">↑</span></button>
+
+  <footer><p>Design Engineering Leaders</p><p>Interview 02 of 03 · Jason Sutter</p><p>Research and design by Amanda Valverde · 2026</p><a href="ranier-tinkelenberg.html">Next: Ranier Tinkelenberg →</a></footer>
+</body>
+</html>

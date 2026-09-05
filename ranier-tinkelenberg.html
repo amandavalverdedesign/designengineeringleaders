@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amanda Valverde interviews product and interaction designer Ranier Tinkelenberg about complexity, design systems, production delivery, and leadership from within.">
+  <meta name="theme-color" content="#f3f0e8">
+  <title>Ranier Tinkelenberg | Design Engineering Leaders</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to interview</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="Design Engineering Leaders, Bill Mead interview"><span>DEL</span><span>Design Engineering Leaders</span></a>
+    <p class="header-credit">INTERVIEWS BY AMANDA VALVERDE</p>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><span aria-hidden="true">+</span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Bill Mead</a>
+      <a href="jason-sutter.html">Jason Sutter</a>
+      <a href="#top" aria-current="page">Ranier Tinkelenberg</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false"><span aria-hidden="true">◐</span><span data-theme-label>Dark mode</span></button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-identity">
+        <div class="hero-name hero-name--ranier" aria-label="Ranier Tinkelenberg"><span>RANIER</span><span>TINKELENBERG</span></div>
+        <nav class="hero-anchor-links" aria-label="Ranier Tinkelenberg page sections">
+          <a href="#introduction">Introduction</a>
+          <a href="#interview">Interview</a>
+          <a href="#reflection">Reflection</a>
+        </nav>
+        <a class="scroll-cue" href="#introduction">Read the interview <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-module">
+        <div class="module-top"><span class="crosshair" aria-hidden="true"><i></i></span><span class="issue-number">03</span></div>
+        <div class="module-title"><h1 id="hero-title">On clarity<br>&amp; outcomes</h1></div>
+        <div class="module-bottom"><span class="interview-label">Interview 03 of 03</span><span class="mini-grid" aria-hidden="true"></span></div>
+      </div>
+    </section>
+
+    <section class="introduction ruled-section" id="introduction" aria-labelledby="intro-title">
+      <div class="section-marker"><span>01</span><p>Introduction</p></div>
+      <div class="intro-copy">
+        <p class="eyebrow">Product designer · Interaction designer · Systems thinker</p>
+        <h2 id="intro-title">Ranier Tinkelenberg translates complexity into coherent, buildable interactions.</h2>
+        <p class="standfirst">Ranier and I were fellow volunteers at Capitol Creative Alliance, a nonprofit based in Sacramento, California. He is a mid-to-senior-level product and interaction designer whose practice connects user research, interface design, prototyping, design systems, and production delivery. His experience includes simplifying complex healthcare and financial experiences, leading discovery for emerging products, and collaborating with product managers, engineers, researchers, content designers, and business stakeholders.</p>
+        <p>Ranier approaches design engineering as the work of translating human needs and organizational requirements into coherent, buildable interactions. His projects demonstrate particular attention to mobile usability, information architecture, progressive disclosure, healthcare literacy, and the small interface decisions that reduce cognitive load. Working primarily through Figma and interactive prototypes, he operates close to front-end implementation by defining component behavior, responsive patterns, interaction logic, and production-ready specifications.</p>
+      </div>
+    </section>
+
+    <section class="interview" id="interview" aria-labelledby="interview-title">
+      <header class="interview-header">
+        <div class="section-marker light-marker"><span>02</span><p>Interview</p></div>
+        <div><p class="eyebrow">Ten questions · Full responses</p><h2 id="interview-title">The conversation</h2><p>A mid-to-senior perspective on simplifying consequential systems while preserving user confidence, technical feasibility, and design intent.</p></div>
+        <button class="expand-all" type="button" data-expand-all aria-pressed="false">Expand all</button>
+      </header>
+
+      <div class="question-list">
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="true" aria-controls="ranier-answer-01"><span class="question-number">01</span><span class="question-copy"><small>Translation across disciplines</small>How do you define design engineering?</span><span class="toggle-mark" aria-hidden="true">−</span></button>
+          <div class="answer" id="ranier-answer-01">
+            <p class="speaker">Ranier</p>
+            <p>I see design engineering as translation, but not simply translating a finished Figma file into code. It means translating among user needs, interaction behavior, business requirements, technical constraints, and the realities of production.</p>
+            <p>A traditional handoff assumes that design ends before engineering begins. In practice, many of the most important design decisions happen after implementation questions emerge. What happens when content is longer than expected? How should a component respond on a smaller screen? What happens when data is missing, delayed, or contradictory? A design engineer stays involved in those questions because they affect the experience just as much as visual design does.</p>
+            <p>Even when I am not writing the production code myself, I try to think in systems and behaviors rather than static screens. I want engineers to understand the intent behind a decision, and I want designers to understand what their decisions ask of the system.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-02"><span class="question-number">02</span><span class="question-copy"><small>Learning the domain</small>How do you begin designing for a complicated subject you do not fully understand?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-02" hidden>
+            <p class="speaker">Ranier</p>
+            <p>The first step is admitting that I do not understand it yet. Designers can get into trouble when we assume that general UX knowledge is enough to solve a highly specialized problem. Before simplifying health insurance for someone else, I have to understand the terminology, policies, dependencies, and consequences myself.</p>
+            <p>That does not mean becoming a healthcare or financial expert. It means learning enough to recognize where users are being asked to perform expert reasoning. On the Guided Shopping project, research showed that many participants could not confidently distinguish between an HMO and a PPO. That was not a failure on their part. It revealed that the product was expecting users to bring knowledge the experience had never taught them.</p>
+            <p>The design opportunity was to integrate education into the decision rather than placing it in a glossary somewhere else. Good simplification comes from understanding complexity, not hiding it.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-03"><span class="question-number">03</span><span class="question-copy"><small>Confidence over minimalism</small>How do you decide what users need and what the interface can remove?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-03" hidden>
+            <p class="speaker">Ranier</p>
+            <p>I look for the smallest amount of information that allows someone to make a confident decision. Minimalism by itself is not always helpful. If we remove too much, an experience can feel fast but untrustworthy. If we ask for too much, people become frustrated or abandon the process.</p>
+            <p>We saw that tension while testing the Guided Shopping questionnaire. Two questions felt easy, but some users doubted whether such limited information could produce a meaningful recommendation. Four or five questions felt more comprehensive, but the additional effort increased friction and made the recommendation logic more complicated. Three questions provided a better balance between speed and credibility.</p>
+            <p>That taught me to evaluate simplicity through user confidence, not merely the number of screens or fields. A shorter experience is not necessarily a clearer one.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-04"><span class="question-number">04</span><span class="question-copy"><small>Skills for implementation</small>What skills do you rely on most?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-04" hidden>
+            <p class="speaker">Ranier</p>
+            <p>Systems thinking is probably the most important. I need to understand how one interaction affects everything downstream, including content, validation, data requirements, responsive behavior, accessibility, and engineering effort.</p>
+            <p>Prototyping is another essential skill because it allows me to communicate behavior rather than expecting everyone to interpret a static screen in the same way. I also rely heavily on information architecture, component thinking, usability testing, and clear documentation.</p>
+            <p>The less visible skill is communication. A designer working close to engineering has to explain why a behavior matters without treating personal preference as evidence. You also need enough technical fluency to ask useful questions and recognize when a seemingly small design decision creates significant implementation complexity.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-05"><span class="question-number">05</span><span class="question-copy"><small>The production gap</small>What keeps you up at night?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-05" hidden>
+            <p class="speaker">Ranier</p>
+            <p>I worry about the gap between the experience we tested and the experience people eventually receive. A prototype operates in controlled conditions. A live product has real content, imperfect data, slow connections, accessibility requirements, edge cases, policy changes, and legacy systems.</p>
+            <p>I also think about people who are already entering an experience with anxiety or limited confidence. In healthcare, for example, an unclear recommendation or eligibility question can affect more than task completion. It can influence whether someone feels capable of making an important decision about their health or finances.</p>
+            <p>That is why post-launch QA matters. Shipping is a milestone, but it is not proof that the design is finished. We have to keep checking whether the implemented experience preserves the clarity and intent of what we designed.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-06"><span class="question-number">06</span><span class="question-copy"><small>Ambition and feasibility</small>How do you balance vision with what a team can realistically build?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-06" hidden>
+            <p class="speaker">Ranier</p>
+            <p>I like giving the team permission to explore the ambitious version before reducing the scope. Starting with feasibility alone can cause everyone to reproduce what already exists.</p>
+            <p>On the Guided Shopping project, we developed a “Blue Sky” version and then worked with stakeholders and engineers to determine what was achievable within the deadline. That made the tradeoffs more explicit. Instead of saying, “We cannot do that,” we could ask which part of the idea created the most value and how we might preserve it in a smaller form.</p>
+            <p>The key is not becoming attached to a particular interface. I try to protect the user outcome rather than the first solution. A feature can change significantly while still preserving its underlying purpose.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-07"><span class="question-number">07</span><span class="question-copy"><small>Shared behavioral language</small>How do design systems influence your work?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-07" hidden>
+            <p class="speaker">Ranier</p>
+            <p>A design system gives a team a shared language. It helps designers and engineers make decisions consistently instead of rebuilding the same patterns for every feature.</p>
+            <p>But a design system is more than a collection of colors, buttons, and input fields. It should explain behavior. What happens when a label wraps? What states does the component support? How does it respond to keyboard input? What happens on mobile? What are the content limitations? Those rules are where design systems become genuinely useful to implementation.</p>
+            <p>Systems also free designers to focus on higher-level problems. When foundational patterns are dependable, the team can spend more time improving the journey and less time debating the construction of every individual screen.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-08"><span class="question-number">08</span><span class="question-copy"><small>Small decisions, real effects</small>Can you describe a small decision that meaningfully improved the experience?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-08" hidden>
+            <p class="speaker">Ranier</p>
+            <p>On the mobile plan-comparison experience, we changed “Add to Cart” to “Select.” The original label wrapped when three plans appeared side by side, disrupting the layout at a moment when users needed to compare information quickly.</p>
+            <p>“Select” was shorter, but it also described the action more accurately. Choosing health insurance does not feel like putting a retail product into a shopping cart. The revised language improved the visual structure and better matched the emotional weight of the decision.</p>
+            <p>We also used alternating row shading to help people scan across dense comparison tables. Neither choice would be considered a headline feature, but these details reduce cognitive load. A considered experience is often built from decisions users may never consciously notice.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-09"><span class="question-number">09</span><span class="question-copy"><small>Knowledge still to build</small>What do you wish you knew more about?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-09" hidden>
+            <p class="speaker">Ranier</p>
+            <p>I would like even deeper knowledge of front-end architecture and the systems behind the interfaces I design. Understanding code changes how you think about components, states, responsiveness, and reuse. It also helps you distinguish between a design that is visually complete and one that is behaviorally complete.</p>
+            <p>I would also like more consistent access to post-launch evidence. Designers often conduct research before release and then move to another project shortly after launch. Product analytics, support issues, accessibility findings, and engineering observations can reveal whether our assumptions held up in real conditions.</p>
+            <p>The more clearly I can connect design decisions to outcomes, the more responsibly I can advocate for users and help the team prioritize future work.</p>
+          </div>
+        </article>
+
+        <article class="question-card">
+          <button class="question-toggle" type="button" aria-expanded="false" aria-controls="ranier-answer-10"><span class="question-number">10</span><span class="question-copy"><small>Clarity without authority</small>What does leadership look like without a formal management title?</span><span class="toggle-mark" aria-hidden="true">+</span></button>
+          <div class="answer" id="ranier-answer-10" hidden>
+            <p class="speaker">Ranier</p>
+            <p>Leadership often looks like creating clarity when a team is surrounded by ambiguity. It might mean identifying the question nobody has asked, connecting two teams that are working from different assumptions, or documenting why a decision was made so the team does not repeatedly revisit it.</p>
+            <p>It also means knowing when to challenge an idea and when to let go of your own. A design leader should make it safer for researchers, designers, engineers, and stakeholders to expose uncertainty. If people feel they must defend every early idea, the team will hide problems until they become expensive.</p>
+            <p>For me, leadership is not having the most polished answer in the room. It is helping the group arrive at a stronger answer and making sure the user does not disappear while organizational and technical decisions are being made.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pull-quotes ruled-section" aria-labelledby="quotes-title">
+      <div class="section-marker"><span>03</span><p>In his words</p></div>
+      <div class="quotes-content">
+        <p class="eyebrow">Selected pull quotes</p><h2 id="quotes-title">Ideas worth carrying forward</h2>
+        <p>These quotations are drawn from the modeled interview and should be approved by Ranier before being attributed to him publicly.</p>
+        <div class="quotes-grid">
+          <blockquote>“Good simplification comes from understanding complexity, not hiding it.”</blockquote>
+          <blockquote>“A shorter experience is not necessarily a clearer one.”</blockquote>
+          <blockquote>“I try to protect the user outcome rather than the first solution.”</blockquote>
+          <blockquote>“Shipping is a milestone, but it is not proof that the design is finished.”</blockquote>
+          <blockquote>“A design system should explain behavior, not just appearance.”</blockquote>
+          <blockquote>“Leadership is not having the most polished answer in the room. It is helping the group arrive at a stronger answer.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflection" id="reflection" aria-labelledby="reflection-title">
+      <header class="reflection-header"><div class="section-marker light-marker"><span>04</span><p>Reflection</p></div><div><p class="eyebrow">What I learned</p><h2 id="reflection-title">Role, challenge, leadership</h2></div></header>
+      <div class="reflection-grid">
+        <article><span>01 · The role</span><p>Through this interview, I learned that design engineering is less about occupying a fixed position between two disciplines and more about maintaining continuity across them. The role requires someone to carry user needs from research through interaction design, technical negotiation, implementation, and post-launch evaluation. Ranier’s approach shows that design-engineering thinking can be present even when a practitioner is not the primary developer. It appears in the way a designer defines responsive behavior, anticipates system states, structures reusable components, and collaborates with engineers around the intent behind a solution.</p></article>
+        <article><span>02 · The challenge</span><p>I also learned that one of the role’s greatest challenges is preserving clarity while working inside complex systems. Healthcare policies, eligibility rules, technical dependencies, deadlines, and business requirements can easily become visible burdens for users. The designer must understand that complexity deeply enough to reorganize it without oversimplifying consequential decisions. This creates a continuing tension between speed and confidence, ambition and feasibility, and an ideal prototype and the realities of a production environment. It also explains why design engineers must pay attention to small details, edge cases, accessibility, real content, and post-launch behavior.</p></article>
+        <article><span>03 · Leadership from within</span><p>Finally, I learned that leadership from within does not depend on managing a team. It can take the form of asking better questions, making tradeoffs visible, connecting people across disciplines, and helping a group work productively through uncertainty. Ranier’s work suggests that strong design leadership protects the intended user outcome without becoming overly attached to a particular solution. It creates conditions in which designers, engineers, researchers, and stakeholders can identify problems honestly and contribute their expertise. In this sense, leadership is not individual authority. It is the ability to build shared understanding and help a cross-functional team make more responsible decisions.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">↑</span></button>
+
+  <footer><p>Design Engineering Leaders</p><p>Interview 03 of 03 · Ranier Tinkelenberg</p><p>Research and design by Amanda Valverde · 2026</p><a href="index.html">Return to Bill Mead ↗</a></footer>
+</body>
+</html>
